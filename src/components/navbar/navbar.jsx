@@ -1,5 +1,5 @@
-import './style.css';
-import Cart from '../cart/index.js';
+import './navbar.scss';
+import Cart from '../cart/cart.jsx';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";

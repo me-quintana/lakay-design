@@ -1,0 +1,69 @@
+$font: 'Quicksand', sans-serif;
+
+$color-blue: #0091a1;
+$color-brown: #bf9b77;
+$color-dark-brown: #532e1c;
+$color-red: #e34724;
+$color-white: #ffffff;
+
+.sectionBrown {
+    background-color: $color-brown;
+    font-family: $font;
+    .navbarLogo {
+        width: 216px;
+        height: 100px;
+        margin-right: 20px;
+    }
+    .navbar-collapse {
+        align-items: baseline;
+        a {
+            color: $color-white;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        a:hover {
+            color: $color-blue;
+        }
+        .dropdown-item {
+            color: $color-dark-brown;
+        }
+    }
+    .searchBtn {
+        color: $color-white;
+        font-size: 20px;
+        border: none;
+    }
+    .searchBtn:hover {
+        color: $color-blue;
+    }
+    .navbarIconsSection {
+        display: flex;
+        width: 250px;
+        .navbarIcon {
+            color: $color-white;
+            font-size: 0.7rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+            width: 200px;
+            margin: 0px;
+            .iconFontAwesone {
+                font-size: 20px;
+            }
+            p {
+                padding-top: 5px;
+            }
+        }
+        .navbarIcon:hover {
+            color: $color-blue;
+            text-decoration: none;
+        }
+    }
+}
+
+/*.dropdown-item:hover {
+    color: #0091a1;
+}*/
