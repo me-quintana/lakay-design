@@ -30,12 +30,15 @@ const ItemListContainer = (props) => {
     }, []);
 
     if(isLoading) {
-        return <h1>Cargando productos...</h1>;
+        return (
+            <div className="d-flex justify-content-center">
+                <img src="/images/loading.gif" className="loading" alt="Loading"/>
+            </div>
+        );
     };
 
     return (
         <>
-            <ItemCount inicial={1} stock={10} onAdd={onAdd}/>
             <ItemList products={products}/>
         </>
     );
