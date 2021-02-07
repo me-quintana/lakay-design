@@ -9,40 +9,12 @@ $color-white: #ffffff;
 .card-body {
     font-family: $font;
     text-align: center;
+    padding-bottom: 0px;
     h5 {
         text-transform: uppercase;
         font-weight: bold;
     }
     p {
-        font-size: 0.8rem;
-    }
-}
-
-.card-footer {
-    background-color: $color-white;
-    font-family: $font;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    p {
-        margin: 0px;
-    }
-    button {
-        background-color: $color-brown;
-        color: $color-white;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-decoration: none;
-        border: 1px solid $color-brown;
-        margin: 0px;
-        border-radius: 0.3rem;
-        width: 8rem;
-        transition: 0.15s;
-    }
-    button:hover {
-        background-color: $color-red;
-        color: $color-white;
-        border-color: $color-red;
+        font-size: 1.2rem;
     }
 }
