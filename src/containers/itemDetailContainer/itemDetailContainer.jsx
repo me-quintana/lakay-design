@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+//import ProductsList from '../../mocks/productsList/productsList.jsx';
+import ItemDetail from '../../components/itemDetail/itemDetail.jsx';
 
-const ItemDetailContainer = () => {
-
-    useEffect(() => {
+const ItemDetailContainer = ({ products}) => {
+    
+    /*useEffect(() => {
 
         const Promesa = new Promise((resolve, reject) => {
             setTimeout(() => resolve(ProductsList), 2000);
@@ -10,9 +12,14 @@ const ItemDetailContainer = () => {
 
         Promesa.then((result) => {
             setProducts(result);
-            setIsLoading(false);
         });
-    }, []);
+    }, []);*/
+    
+    return (
+        <>
+            <ItemDetail/>;
+        </>
+    );
 };
 
 export default ItemDetailContainer;

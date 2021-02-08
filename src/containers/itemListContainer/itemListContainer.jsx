@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './itemListContainer.scss';
-import ItemCount from '../../components/itemCount/itemCount.jsx';
 import ProductsList from '../../mocks/productsList/productsList.jsx';
 import ItemList from '../../components/itemList/itemList.jsx';
 
