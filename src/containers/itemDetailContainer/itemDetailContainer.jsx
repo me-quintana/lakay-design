@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
-//import ProductsList from '../../mocks/productsList/productsList.jsx';
+import ProductsList from '../../mocks/productsList/productsList.jsx';
 import ItemDetail from '../../components/itemDetail/itemDetail.jsx';
 
-const ItemDetailContainer = ({ products}) => {
+const ItemDetailContainer = () => {
+
+    const [product, setProduct] = useState(null);
     
-    /*useEffect(() => {
+    useEffect(() => {
 
-        const Promesa = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(ProductsList), 2000);
+        const PromesaDetail = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(ProductsList.find(prod => prod.id == 1), 2000));
         });
 
-        Promesa.then((result) => {
-            setProducts(result);
+        PromesaDetail.then((result) => {
+            setProduct(result);
         });
-    }, []);*/
+    }, []);
     
     return (
         <>
-            <ItemDetail/>;
+            {product && <ItemDetail product = {product}/>};
         </>
     );
 };

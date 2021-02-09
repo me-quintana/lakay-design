@@ -6,13 +6,16 @@ $color-dark-brown: #532e1c;
 $color-red: #e34724;
 $color-white: #ffffff;
 
-.card {
+.cardItemDetail {
     img {
         width: 100%;
     }
-    .card-body {
+    .card-body{
+        display: grid;
+        align-items: center;
         font-family: $font;
         text-align: left;
+        padding: 0px;
         h5 {
             text-transform: uppercase;
             font-weight: bold;

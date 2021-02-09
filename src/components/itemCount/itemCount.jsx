@@ -26,7 +26,7 @@ const ItemCount = ({inicial, stock, onAdd}) => {
                     : <button className="btn quantityBtn disabled">+</button>
                 }
             </div>
-            <div className="card-footer">
+            <div className="card-footer cardFooterItemCount">
                 <button type="button" className="btn shadow-sm mainBtn agregarProducto" data-id="1" onClick={() => {onAdd(stock, contador)}}>Agregar</button>
             </div>
         </>

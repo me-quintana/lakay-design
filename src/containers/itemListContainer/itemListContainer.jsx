@@ -18,11 +18,11 @@ const ItemListContainer = (props) => {
 
         setIsLoading(true);
 
-        const Promesa = new Promise((resolve, reject) => {
+        const PromesaItems = new Promise((resolve, reject) => {
             setTimeout(() => resolve(ProductsList), 2000);
         });
 
-        Promesa.then((result) => {
+        PromesaItems.then((result) => {
             setProducts(result);
             setIsLoading(false);
         });

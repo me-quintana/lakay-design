@@ -1,5 +1,5 @@
 const ProductList = [
-    {id: 1, name: "Espejo Awondi", price: 1300, stock: 10, image: "/images/espejo.jpg"},
+    {id: 1, name: "Espejo Awondi", description: "Espejo de pared redondo (50cm de diámetro) con marco superior de cobre.", price: 1300, stock: 10, image: "/images/espejo.jpg"},
     {id: 2, name: "Almohadón Luftig", price: 1400, stock: 25, image: "/images/almohadon.jpg"},
     {id: 3, name: "Camino Asztal blanco", price: 1250, stock: 15, image: "/images/camino.jpg"},
     {id: 4, name: "Fanal Haus grande", price: 1500, stock: 12, image: "/images/fanal.jpg"},

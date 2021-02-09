@@ -11,9 +11,9 @@ const Item = ({ products }) => {
 
     return (
         <div className="col mb-4">
-            <div className="card shadow">
+            <div className="card cardItem shadow">
                 <img src={products.image} className="card-img-top img-fluid" alt="Bondiola con papines"/>
-                <div className="card-body">
+                <div className="card-body px-3">
                     <h5 className="card-title m-0">{products.name}</h5>
                     <p className="precio mt-3">${products.price}</p>
                     <ItemCount inicial={1} stock={products.stock} onAdd={onAdd}/>
