@@ -28,6 +28,9 @@ $color-white: #ffffff;
         .dropdown-item {
             color: $color-dark-brown;
         }
+        .activeSection {
+            color: $color-blue;
+        }
     }
     .searchBtn {
         color: $color-white;

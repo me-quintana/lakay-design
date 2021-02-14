@@ -7,6 +7,7 @@ $color-red: #e34724;
 $color-white: #ffffff;
 
 .cardItem {
+    color: $color-dark-brown;
     font-family: $font;
     text-align: center;
     padding-bottom: 0px;
@@ -17,4 +18,8 @@ $color-white: #ffffff;
     p {
         font-size: 1.2rem;
     }
+}
+.cardItem:hover {
+    color: $color-dark-brown;
+    text-decoration: none;
 }
