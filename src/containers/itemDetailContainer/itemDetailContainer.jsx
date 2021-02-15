@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
 
         const PromesaDetail = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(ProductsList.find(prod => prod.itemID == itemID), 2000));
+            setTimeout(() => resolve(ProductsList.find(prod => prod.itemID === itemID), 2000));
         });
 
         PromesaDetail.then((result) => {
@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
     
     return (
         <>
-            {product && <ItemDetail product = {product}/>};
+            {product && <ItemDetail product = {product}/>}
         </>
     );
 };

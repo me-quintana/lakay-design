@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ProductsList from '../../mocks/productsList/productsList.jsx';
 import ItemList from '../../components/itemList/itemList.jsx';
 
 const ItemListContainer = (props) => {
 
+    const {categoryID} = useParams();
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -18,14 +20,14 @@ const ItemListContainer = (props) => {
         setIsLoading(true);
 
         const PromesaItems = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(ProductsList), 2000);
+            setTimeout(() => resolve((categoryID ? ProductsList.filter(prod => prod.categoryID === categoryID) : ProductsList), 2000));
         });
 
         PromesaItems.then((result) => {
             setProducts(result);
             setIsLoading(false);
         });
-    }, []);
+    }, [categoryID]);
 
     if(isLoading) {
         return (
@@ -36,9 +38,7 @@ const ItemListContainer = (props) => {
     };
 
     return (
-        <>
-            <ItemList products={products}/>
-        </>
+        <ItemList products={products}/>
     );
 };
 

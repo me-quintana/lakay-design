@@ -12,14 +12,18 @@ const Item = ({ products }) => {
 
     return (
         <div className="col mb-4">
-            <Link to={`/productos/${products.itemID}`} className="card cardItem shadow">
-                <img src={products.image} className="card-img-top img-fluid" alt={products.name}/>
-                <div className="card-body px-3">
+            <div to={`/productos/${products.itemID}`} className="card cardItem shadow">
+                <Link to={`/productos/${products.itemID}`}>
+                    <img src={products.image} className="card-img-top img-fluid" alt={products.name}/>
+                </Link>
+                <Link to={`/productos/${products.itemID}`} className="card-body py-0 px-3">
                     <h5 className="card-title m-0">{products.name}</h5>
                     <p className="precio mt-3">${products.price}</p>
+                </Link>
+                <div className="pb-3">   
                     <ItemCount inicial={1} stock={products.stock} onAdd={onAdd}/>
                 </div>
-            </Link>
+            </div>
         </div>
     );
 };

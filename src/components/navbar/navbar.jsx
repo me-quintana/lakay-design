@@ -1,7 +1,5 @@
 import './navbar.scss';
-import React, { useEffect } from 'react';
-import { NavLink, Link, useParams } from 'react-router-dom';
-import ProductsList from '../../mocks/productsList/productsList.jsx';
+import { NavLink, Link } from 'react-router-dom';
 import Cart from '../cart/cart.jsx';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
@@ -9,17 +7,10 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
-
-    const {categoryID} = useParams();
-
-    useEffect(() => {
-        let itemsPorCategoria = ProductsList.find(prod => prod.categoryID == categoryID)
-    }, [categoryID]);
-
     return (
         <div className="container-fluid sticky-top sectionBrown p-0">
             <nav className="navbar navbar-expand-lg px-3 py-0">
-                <Link to={`/index`} className="navbar-brand m-0" href="#">
+                <Link to={`/`} className="navbar-brand m-0" href="#">
                     <img src="/images/logo-marron.png" className="navbarLogo" alt="Logo Lakay Design"/> 
                 </Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

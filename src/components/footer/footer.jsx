@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <footer className="container-fluid px-0 py-3">
 			    <div className="footerDiv mb-5 mb-sm-0">
-			        <Link to={`/index`}>
+			        <Link to={`/`}>
                         <img src="/images/logo-marron.png" className="footerLogo" alt="Logo Lakay Design"/> 
 			        </Link>
 		        </div>

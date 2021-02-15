@@ -11,15 +11,19 @@ $color-white: #ffffff;
     font-family: $font;
     text-align: center;
     padding-bottom: 0px;
-    h5 {
+    a {
+        color: $color-dark-brown;
         text-transform: uppercase;
-        font-weight: bold;
+        text-decoration: none;
+        h5 {
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2rem;
+        }
     }
-    p {
-        font-size: 1.2rem;
+    a:hover {
+        color: $color-dark-brown;
+        text-decoration: none;
     }
-}
-.cardItem:hover {
-    color: $color-dark-brown;
-    text-decoration: none;
 }

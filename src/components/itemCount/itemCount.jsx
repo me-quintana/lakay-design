@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './itemCount.scss';
 
-const ItemCount = ({inicial, stock, onAdd}) => {
+const ItemCount = ({ inicial, stock, onAdd }) => {
 
     const [contador, setContador] = useState(inicial);
 
@@ -26,7 +26,7 @@ const ItemCount = ({inicial, stock, onAdd}) => {
                     : <button className="btn quantityBtn disabled">+</button>
                 }
             </div>
-            <div className="card-footer cardFooterItemCount">
+            <div className="card-footer cardFooterItemCount pt-3 pb-0">
                 <button type="button" className="btn shadow-sm mainBtn agregarProducto" data-id="1" onClick={() => {onAdd(stock, contador)}}>Agregar</button>
             </div>
         </>
