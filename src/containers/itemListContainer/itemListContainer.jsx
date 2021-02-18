@@ -9,12 +9,6 @@ const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const onAdd = (stock, contador) => {
-        return () => {
-            if(contador <= stock) {};
-        };
-    };
-
     useEffect(() => {
 
         setIsLoading(true);

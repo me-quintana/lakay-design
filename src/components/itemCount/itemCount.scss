@@ -27,19 +27,19 @@ b {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    button {
+    .addToCart {
         background-color: $color-brown;
         color: $color-white;
         text-transform: uppercase;
         font-weight: bold;
         text-decoration: none;
         border: 1px solid $color-brown;
-        margin: 0px;
         border-radius: 0.3rem;
         width: 8rem;
+        margin: 0px;
         transition: 0.15s;
     }
-    button:hover {
+    .addToCart:hover {
         background-color: $color-red;
         color: $color-white;
         border-color: $color-red;

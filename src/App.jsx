@@ -4,6 +4,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Navbar from './components/navbar/navbar.jsx';
+import Cart from './components/cart/cart.jsx';
 import Footer from './components/footer/footer.jsx';
 import Home from './components/home/home.jsx';
 import ItemListContainer from './containers/itemListContainer/itemListContainer.jsx';
@@ -11,9 +12,12 @@ import ItemDetailContainer from './containers/itemDetailContainer/itemDetailCont
 import Envios from './components/envios/envios.jsx';
 import Nosotros from './components/nosotros/nosotros.jsx';
 import Contacto from './components/contacto/contacto.jsx';
+import CartContext from './context/cartContext.jsx';
 
 const App = () => {
   return (
+    <CartContext.Provider value={[]}>
+    
     <Router>
 
       <Navbar/>
@@ -28,13 +32,9 @@ const App = () => {
 
         <Route exact path="/productos/:itemID" component={ItemDetailContainer}/>
 
-        <Route exact path="/cart">
-          <ItemDetailContainer/>
-        </Route>
+        <Route exact path="/cart" component={Cart}/>
 
-        <Route exact path="/checkout">
-          <ItemDetailContainer/>
-        </Route>
+        <Route exact path="/checkout"/>
 
         <Route exact path="/envios" component={Envios}/>
 
@@ -42,13 +42,15 @@ const App = () => {
 
         <Route exact path="/contacto" component={Contacto}/>
 
-        <Route path="*" children={<div className="d-flex justify-content-center my-5"><img src="/images/404.jpg"/></div>}/>
+        <Route path="*" children={<div className="d-flex justify-content-center my-5"><img src="/images/404.jpg" alt="Error 404"/></div>}/>
 
       </Switch>
 
       <Footer/>
 
     </Router>
+    
+    </CartContext.Provider>
   );
 };
 

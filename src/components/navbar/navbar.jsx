@@ -1,5 +1,5 @@
-import './navbar.scss';
 import { NavLink, Link } from 'react-router-dom';
+import './navbar.scss';
 import Cart from '../cart/cart.jsx';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <div className="container-fluid sticky-top sectionBrown p-0">
             <nav className="navbar navbar-expand-lg px-3 py-0">
-                <Link to={`/`} className="navbar-brand m-0" href="#">
+                <Link to={`/`} className="navbar-brand m-0">
                     <img src="/images/logo-marron.png" className="navbarLogo" alt="Logo Lakay Design"/> 
                 </Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

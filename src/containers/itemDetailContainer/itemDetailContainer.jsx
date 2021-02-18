@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
 
     const {itemID} = useParams();
     const [product, setProduct] = useState(null);
-    
+
     useEffect(() => {
 
         const PromesaDetail = new Promise((resolve, reject) => {

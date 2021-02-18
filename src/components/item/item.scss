@@ -11,6 +11,7 @@ $color-white: #ffffff;
     font-family: $font;
     text-align: center;
     padding-bottom: 0px;
+    transition: 0.15s;
     a {
         color: $color-dark-brown;
         text-transform: uppercase;
@@ -21,9 +22,30 @@ $color-white: #ffffff;
         p {
             font-size: 1.2rem;
         }
+        .goToCart {
+            background-color: $color-brown;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid $color-brown;
+            border-radius: 0.3rem;
+            width: 8.5rem;
+            margin: 0px;
+            transition: 0.15s;
+        }
+        .goToCart:hover {
+            background-color: $color-red;
+            color: $color-white;
+            border-color: $color-red;
+        }
     }
     a:hover {
         color: $color-dark-brown;
         text-decoration: none;
     }
+}
+
+.cardItem:hover {
+    transform: scale(1.03);
 }
