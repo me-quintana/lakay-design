@@ -4,9 +4,8 @@ import ProductsList from '../../mocks/productsList/productsList.jsx';
 import ItemList from '../../components/itemList/itemList.jsx';
 
 const ItemListContainer = (props) => {
-
     const {categoryID} = useParams();
-    const [products, setProducts] = useState([]);
+    const [item, setItem] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
@@ -18,7 +17,7 @@ const ItemListContainer = (props) => {
         });
 
         PromesaItems.then((result) => {
-            setProducts(result);
+            setItem(result);
             setIsLoading(false);
         });
     }, [categoryID]);
@@ -32,7 +31,7 @@ const ItemListContainer = (props) => {
     };
 
     return (
-        <ItemList products={products}/>
+        <ItemList item={item}/>
     );
 };
 

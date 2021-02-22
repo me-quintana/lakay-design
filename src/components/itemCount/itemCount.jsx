@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './itemCount.scss';
 
 const ItemCount = ({ inicial, stock, onAdd }) => {
-
     const [contador, setContador] = useState(inicial);
 
     const onSubstractItem = () => {
@@ -27,7 +26,7 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
                 }
             </div>
             <div className="card-footer cardFooterItemCount pt-3 pb-0">
-                <button type="button" className="btn shadow-sm mainBtn addToCart" data-id="1" onClick={() => {onAdd(stock, contador)}}>Agregar</button>
+                <button type="button" className="btn shadow-sm mainBtn addToCart" data-id="1" onClick={(evt) => {onAdd(evt, contador)}}>Agregar</button>
             </div>
         </>
     );

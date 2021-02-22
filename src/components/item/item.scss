@@ -49,3 +49,14 @@ $color-white: #ffffff;
 .cardItem:hover {
     transform: scale(1.03);
 }
+
+//Media queries
+
+//Large
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .cardItem {
+        h5 {
+            font-size: 1.15rem;
+        }
+    }
+};

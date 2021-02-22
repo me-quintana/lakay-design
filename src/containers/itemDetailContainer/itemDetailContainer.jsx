@@ -4,24 +4,23 @@ import ProductsList from '../../mocks/productsList/productsList.jsx';
 import ItemDetail from '../../components/itemDetail/itemDetail.jsx';
 
 const ItemDetailContainer = () => {
-
     const {itemID} = useParams();
-    const [product, setProduct] = useState(null);
+    const [item, setItem] = useState(null);
 
     useEffect(() => {
 
         const PromesaDetail = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(ProductsList.find(prod => prod.itemID === itemID), 2000));
+            setTimeout(() => resolve(ProductsList.find(i => i.itemID === itemID), 2000));
         });
 
         PromesaDetail.then((result) => {
-            setProduct(result);
+            setItem(result);
         });
     }, [itemID]);
     
     return (
         <>
-            {product && <ItemDetail product = {product}/>}
+            {item && <ItemDetail item = {item}/>}
         </>
     );
 };

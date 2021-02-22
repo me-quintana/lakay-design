@@ -9,30 +9,30 @@ $color-white: #ffffff;
 footer {
     background-color: $color-brown;
     font-family: $font;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    .footerLogo {
-        width: 216px;
-        height: 100px;
+    .row {
+        width: 100%;
+        margin: 0px;
+        .footerLogo {
+            width: 216px;
+            height: 100px;
+        }
+        h6 {
+            color: $color-white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        a {
+            color: $color-white;
+            text-decoration: none;
+            transition: 0.15s;
+        }
+        a:hover {
+            color: $color-blue;
+            text-decoration: none;
+        }
+        .footerIcon {
+            width: 30px;
+            height: 30px;
+        }
     }
-    h6 {
-        color: $color-white;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    a {
-		color: $color-white;
-		text-decoration: none;
-		transition: 0.15s;
-	}
-	a:hover {
-		color: $color-blue;
-		text-decoration: none;
-	}
-    .footerIcon {
-        width: 30px;
-        height: 30px;
-    } 
 }

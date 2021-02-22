@@ -7,7 +7,7 @@ $color-red: #e34724;
 $color-white: #ffffff;
 
 .carousel-inner {
-    height: 350px;
+    height: auto;
 }
 
 .homeIcon {
@@ -47,6 +47,28 @@ $color-white: #ffffff;
             width: 25%;
             height: auto;
             margin: 0px 2px;
+        }
+    }
+}
+
+//Media queries
+
+//Extra small
+@media screen and (max-width: 575px) {
+    .homeText {
+        font-size: 0.7rem;
+    }
+    #tuHogar {
+        h3 {
+            font-size: 1.45rem;
+        }
+        #fotosTuHogar {
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: 50%;
+                margin: 10px 0px;
+            }
         }
     }
 }

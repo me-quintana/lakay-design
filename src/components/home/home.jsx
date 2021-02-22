@@ -24,12 +24,12 @@ const Home = () => {
 
         <div className="container-fluid my-5">
             <div className="row row-cols-1 row-cols-md-3">
-                <div className="col text-center px-4">
+                <div className="col text-center mb-5 mb-md-0 px-4">
                     <img src="/images/whatsapp.png" className="img-fluid homeIcon mb-3" alt="Ícono Whatsapp"/>
                     <h6 className="homeTitle">Escribinos por Whatsapp</h6>
                     <p className="d-md-none d-lg-block homeText">Respondemos a tus consultas de manera personalizada</p>
                 </div>
-                <div className="col text-center px-4">
+                <div className="col text-center mb-5 mb-md px-4">
                     <img src="/images/card.png" className="img-fluid homeIcon mb-3" alt="Ícono tarjeta"/>
                     <h6 className="homeTitle">Pagá en cuotas</h6>
                     <p className="d-md-none d-lg-block homeText">Aceptamos todas las tarjetas con hasta 6 cuotas sin interés</p>
@@ -42,7 +42,7 @@ const Home = () => {
             </div>
         </div>
 
-        <div className="container-fluid text-center p-5" id="tuHogar">
+        <div className="container-fluid text-center py-3 px-3" id="tuHogar">
             <div className="row pb-1">
                 <div className="col-12">
                     <h3>Lakay Desing en tu hogar</h3>
