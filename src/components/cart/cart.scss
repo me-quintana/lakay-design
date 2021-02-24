@@ -19,6 +19,23 @@ $color-white: #ffffff;
     .iconFontAwesone {
         font-size: 20px;
     }
+    .cartQuantity {
+        color: $color-white;
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background-color: $color-red;
+        border: 1px solid $color-red;
+        border-radius: 50%;
+        position: relative;
+        top: -1rem;
+        right: -1.1rem;
+        padding: 0px;
+        margin: 0px;
+    }
     p {
         font-family: $font;
         padding-top: 5px;

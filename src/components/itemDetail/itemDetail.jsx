@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './itemDetail.scss';
 import ItemCount from '../../components/itemCount/itemCount.jsx';
-import { UseCartContext } from '../../context/cartContext/cartContext.jsx';
+import { useCartContext } from '../../context/cartContext/cartContext.jsx';
 
 const ItemDetail = ({ item }) => {
     const [goToCart, setGoToCart] = useState(false);
 
-    const { cart, cartQuantity, totalPrice, addItem, removeItem, emptyCart } = UseCartContext();
+    const { cart, cartQuantity, totalPrice, addItem } = useCartContext();
 
     const onAdd = (evt, quantity) => {
         evt.stopPropagation();
