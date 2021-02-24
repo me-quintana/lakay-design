@@ -7,7 +7,7 @@ import { UseCartContext } from '../../context/cartContext/cartContext.jsx';
 const ItemDetail = ({ item }) => {
     const [goToCart, setGoToCart] = useState(false);
 
-    const { cart, cartQuantity, totalPrice,  addItem, removeItem } = UseCartContext();
+    const { cart, cartQuantity, totalPrice, addItem, removeItem, emptyCart } = UseCartContext();
 
     const onAdd = (evt, quantity) => {
         evt.stopPropagation();
@@ -15,10 +15,6 @@ const ItemDetail = ({ item }) => {
         addItem(item, quantity);
 
         setGoToCart(true);
-    };
-
-    const remove = () => {
-        removeItem();
     };
 
     console.log(cart);
@@ -41,7 +37,6 @@ const ItemDetail = ({ item }) => {
                             <Link to={`/cart`}><button type="button" className="btn shadow-sm mainBtn goToCart">Ver carrito</button></Link>
                             : <ItemCount inicial={1} stock={item.stock} onAdd={onAdd}/>
                         }
-                        <button type="button" className="btn shadow-sm mainBtn" onClick={() => {remove()}}>REMOVE</button>
                     </div>
                 </div>
             </div>
