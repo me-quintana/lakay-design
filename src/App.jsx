@@ -4,7 +4,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Navbar from './components/navbar/navbar.jsx';
-import Cart from './components/cart/cart.jsx';
 import Footer from './components/footer/footer.jsx';
 import Home from './components/home/home.jsx';
 import ItemListContainer from './containers/itemListContainer/itemListContainer.jsx';
@@ -12,6 +11,7 @@ import ItemDetailContainer from './containers/itemDetailContainer/itemDetailCont
 import Envios from './components/envios/envios.jsx';
 import Nosotros from './components/nosotros/nosotros.jsx';
 import Contacto from './components/contacto/contacto.jsx';
+import CartContainer from './containers/cartContainer/cartContainer.jsx';
 import CartProvider from './context/cartContext/cartContext.jsx';
 
 const App = () => {
@@ -32,7 +32,7 @@ const App = () => {
 
           <Route exact path="/productos/:itemID" component={ItemDetailContainer}/>
 
-          <Route exact path="/cart" component={Cart}/>
+          <Route exact path="/carrito" component={CartContainer}/>
 
           <Route exact path="/checkout"/>
 

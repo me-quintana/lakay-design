@@ -12,13 +12,16 @@ $color-white: #ffffff;
     .navbarLogo {
         width: 216px;
         height: 100px;
-        margin-right: 20px;
     }
-    .navbar-toggler-icon {
-        background-image: url("http://localhost:3000/images/menu.png");
+    .navbar-toggler {
+        #burgerMenuIcon {
+            color: $color-white;
+            font-size: 25px;
+        }
     }
     .navbar-collapse {
-        align-items: baseline;
+        text-align: right;
+        justify-content: flex-end;
         a {
             color: $color-white;
             font-weight: bold;
@@ -31,36 +34,35 @@ $color-white: #ffffff;
         .dropdown-item {
             color: $color-dark-brown;
         }
+        .dropdown-item:hover {
+            color: $color-blue;
+        }
         .activeSection {
             color: $color-blue;
         }
     }
-    .searchBtn {
-        color: $color-white;
-        font-size: 20px;
+    input {
+        border-radius: 3px;
+    }
+    #searchButton {
         border: none;
+        padding: 0px;
+        #searchIcon {
+            color: $color-white;
+            font-size: 20px;
+        }
+        #searchIcon:hover {
+            color: $color-blue;
+        }
     }
-    .searchBtn:hover {
-        color: $color-blue;
-    }
-    .navbarIconsSection {
-        display: flex;
-        width: 250px;
+    .cartIcon {
+        text-align: center;
+        align-items: center;
         .navbarIcon {
             color: $color-white;
             font-size: 0.8rem;
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr;
-            justify-items: center;
-            align-items: center;
-            width: 200px;
-            margin: 0px;
             .iconFontAwesone {
                 font-size: 20px;
-            }
-            p {
-                padding-top: 5px;
             }
         }
         .navbarIcon:hover {
@@ -82,9 +84,48 @@ $color-white: #ffffff;
     }
 }
 
-//Medium
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .homeTitle {
-        font-size: 0.9rem;
+//Large
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .sectionBrown {
+        .navbarIconSection {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            align-items: center;
+            .navbarIcon {
+                color: $color-white;
+                font-size: 0.8rem;
+                .iconFontAwesone {
+                    font-size: 20px;
+                }
+            }
+            .navbarIcon:hover {
+                color: $color-blue;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//Extra large
+@media screen and (min-width: 1200px) {
+    .sectionBrown {
+        .navbarIconSection {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            align-items: center;
+            .navbarIcon {
+                color: $color-white;
+                font-size: 0.8rem;
+                .iconFontAwesone {
+                    font-size: 20px;
+                }
+            }
+            .navbarIcon:hover {
+                color: $color-blue;
+                text-decoration: none;
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ import { useCartContext } from '../../context/cartContext/cartContext.jsx';
 const ItemDetail = ({ item }) => {
     const [goToCart, setGoToCart] = useState(false);
 
-    const { cart, cartQuantity, totalPrice, addItem } = useCartContext();
+    const { addItem } = useCartContext();
 
     const onAdd = (evt, quantity) => {
         evt.stopPropagation();
@@ -16,10 +16,6 @@ const ItemDetail = ({ item }) => {
 
         setGoToCart(true);
     };
-
-    console.log(cart);
-    console.log(cartQuantity);
-    console.log(totalPrice);
 
     return (
         <div className="container-fluid mx-0 my-5 px-5">
@@ -34,7 +30,7 @@ const ItemDetail = ({ item }) => {
                         <p className="card-text">Medidas:<br/>{item.dimensions}</p>
                         <p className="card-text itemPrice">${item.price}</p>
                         {goToCart ?
-                            <Link to={`/cart`}><button type="button" className="btn shadow-sm mainBtn goToCart">Ver carrito</button></Link>
+                            <Link to={`/carrito`}><button type="button" className="btn shadow-sm mainBtn goToCart">Ver carrito</button></Link>
                             : <ItemCount inicial={1} stock={item.stock} onAdd={onAdd}/>
                         }
                     </div>

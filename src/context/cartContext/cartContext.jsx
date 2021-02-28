@@ -14,7 +14,7 @@ export default function CartProvider({ children }) {
     function addItem(item, quantity) {
 
         //Función para saber si un producto está en el carrito
-        const index = cart.findIndex(i => i.itemID === item.itemID);
+        const index = cart.findIndex(i => i.item.itemID === item.itemID);
 
         setCartQuantity(cartQuantity + quantity);
         setTotalPrice(totalPrice + quantity * item.price);
@@ -34,7 +34,7 @@ export default function CartProvider({ children }) {
 
     //Función para eliminar productos del carrito
     function removeItem(item, quantity) {
-        setCart(cart.filter(i => i.itemID !== item.itemID));
+        setCart(cart.filter(i => i.item.itemID !== item.itemID));
         setCartQuantity(cartQuantity - quantity);
         setTotalPrice(totalPrice - quantity * item.price);
     };
