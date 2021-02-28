@@ -12,7 +12,7 @@ const CartWidget = () => {
             <Link to={`/carrito`} className="navbarIcon p-2">
                 <FontAwesomeIcon icon={faShoppingCart} type="button" className="iconFontAwesone"/>
                 {cartQuantity > 0 &&
-                    <span className="cartQuantity">{cartQuantity}</span>
+                    <p className="cartQuantity">{cartQuantity}</p>
                 }
                 <p className="m-0">Carrito</p>
             </Link>

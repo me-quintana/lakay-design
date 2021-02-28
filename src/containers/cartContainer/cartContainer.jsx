@@ -22,7 +22,7 @@ const CartContainer = () => {
                         <div className="my-2"></div>
                     </div>
                     {React.Children.toArray(cart.map(i => (
-                        <div className="cartDetailItems mx-5">
+                        <div className="cartDetailItems my-4 mx-5">
                             <div>
                                 <img src={`../${i.item.image}`} alt={i.item.name}/>
                             </div>
