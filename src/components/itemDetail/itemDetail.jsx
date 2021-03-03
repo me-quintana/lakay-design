@@ -22,7 +22,7 @@ const ItemDetail = ({ item }) => {
             <div className="card cardItemDetail p-sm-3">
                 <div className="row no-gutters">
                     <div className="col-md-4">
-                        <img src={item.image} alt="Espejo Awondi"/>
+                        <img src={item.image} alt={item.name}/>
                     </div>
                     <div className="col-md-8 card-body mt-4">
                         <h5 className="card-title">{item.name}</h5>
