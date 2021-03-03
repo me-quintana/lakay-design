@@ -11,11 +11,12 @@ const ItemDetailContainer = () => {
 
         const baseDatos = getFirestore();
         const itemCollection = baseDatos.collection("items");
-        const item = itemCollection.doc(itemID);
-        item.get().then((value) => {
+        const itemFirestore = itemCollection.doc(itemID);
+        itemFirestore.get().then((value) => {
+            console.log(value);
             setItem({itemID: value.itemID, ...value.data()});
         });
-    }, []);
+    }, [itemID]);
     
     return (
         <>

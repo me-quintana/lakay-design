@@ -13,27 +13,15 @@ const ItemListContainer = (props) => {
 
         const baseDatos = getFirestore();
         const itemCollection = baseDatos.collection("items");
-        itemCollection.get().then((value) => {
-            let aux = value.docs.map(element => {
-                return element.data();
-            });
-            setIsLoading(false);
-            setItem(aux);
-        });
-    }, []);
-
-        /*const promesaItems = new Promise ((resolve, reject) => {
+        
+        const promesaItems = new Promise ((resolve, reject) => {
             resolve((categoryID) ?
-                (itemCollection.where("categoryID", "==", "categoryID").get().then((value) => {
-                    value.forEach(e => {
-                        return e.data();
-                    })
+                (itemCollection.where("categoryID", "==", categoryID).get().then((value) => {
+                    return value.docs.map(element => ({...element.data()}));
                 }))
                 :
                 (itemCollection.get().then((value) => {
-                    value.docs.map(e => {
-                        return e.data();
-                    })
+                    return value.docs.map(element => ({...element.data()}));
                 }))
             )
         });
@@ -43,7 +31,7 @@ const ItemListContainer = (props) => {
             setIsLoading(false);
         });
 
-    }, [categoryID]);*/
+    }, [categoryID]);
 
     if(isLoading) {
         return (
