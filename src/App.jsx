@@ -13,6 +13,7 @@ import Nosotros from './components/nosotros/nosotros.jsx';
 import Contacto from './components/contacto/contacto.jsx';
 import CartContainer from './containers/cartContainer/cartContainer.jsx';
 import CartProvider from './context/cartContext/cartContext.jsx';
+import Checkout from './components/checkout/checkout.jsx';
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
 
           <Route exact path="/carrito" component={CartContainer}/>
 
-          <Route exact path="/checkout"/>
+          <Route exact path="/checkout" component={Checkout}/>
 
           <Route exact path="/envios" component={Envios}/>
 

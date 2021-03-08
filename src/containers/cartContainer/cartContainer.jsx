@@ -47,7 +47,7 @@ const CartContainer = () => {
                     </div>
                     <div className="cartButtonContainer my-3 mx-5">
                         <button className="btn emptyCartButton mr-3" onClick={emptyCart}>Vaciar carrito</button>
-                        <button className="btn continueButton">Continuar</button>
+                        <Link to={`/checkout`}><button type="button" className="btn shadow-sm continueButton">Continuar</button></Link>
                     </div>
                 </>
             :

@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
         const itemCollection = baseDatos.collection("items");
         const itemFirestore = itemCollection.doc(itemID);
         itemFirestore.get().then((value) => {
-            console.log(value);
             setItem({itemID: value.itemID, ...value.data()});
         });
     }, [itemID]);

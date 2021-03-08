@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();
 
@@ -9,6 +9,18 @@ export default function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [cartQuantity, setCartQuantity] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
+
+    useEffect(() => {
+        if (localStorage.getItem('cart') != null && localStorage.getItem('cart') !== '[]' && cart.length === 0) {
+            setCart(JSON.parse(localStorage.getItem('cart')))
+            setCartQuantity(JSON.parse(localStorage.getItem('cartQuantity')))
+            setTotalPrice(JSON.parse(localStorage.getItem('totalPrice')))
+        } else {
+            localStorage.setItem('cart', JSON.stringify(cart))
+            localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity))
+            localStorage.setItem('totalPrice', JSON.stringify(totalPrice))
+        }
+    }, [cart]);
 
     //Función para agregar productos al carrito
     function addItem(item, quantity) {
@@ -24,12 +36,13 @@ export default function CartProvider({ children }) {
             let newArray = [...cart];
             newArray[index].quantity += quantity;
             setCart(newArray);
-            console.log(index);
         } else {
             //Agregar productos nuevos al carrito
             setCart([...cart, {item, quantity}]);
-            console.log(index);
         };
+        localStorage.removeItem('cart');
+        localStorage.removeItem('cartQuantity');
+        localStorage.removeItem('totalPrice');
     };
 
     //Función para eliminar productos del carrito
@@ -37,6 +50,9 @@ export default function CartProvider({ children }) {
         setCart(cart.filter(i => i.item.itemID !== item.itemID));
         setCartQuantity(cartQuantity - quantity);
         setTotalPrice(totalPrice - quantity * item.price);
+        localStorage.removeItem('cart');
+        localStorage.removeItem('cartQuantity');
+        localStorage.removeItem('totalPrice');
     };
 
     //Función para vaciar el carrito
@@ -44,6 +60,9 @@ export default function CartProvider({ children }) {
         setCart([]);
         setCartQuantity(0);
         setTotalPrice(0);
+        localStorage.removeItem('cart');
+        localStorage.removeItem('cartQuantity');
+        localStorage.removeItem('totalPrice');
     };
 
     return (

@@ -31,33 +31,32 @@ $color-white: #ffffff;
         a:hover {
             color: $color-blue;
         }
-        .dropdown-item {
-            color: $color-dark-brown;
-        }
-        .dropdown-item:hover {
-            color: $color-blue;
-        }
         .activeSection {
             color: $color-blue;
         }
     }
-    input {
-        border-radius: 3px;
-    }
-    #searchButton {
-        border: none;
-        padding: 0px;
-        #searchIcon {
-            color: $color-white;
-            font-size: 20px;
-        }
-        #searchIcon:hover {
-            color: $color-blue;
-        }
-    }
-    .cartIcon {
-        text-align: center;
+    #iconsContainer {
+        display: flex;
+        justify-self: end;
         align-items: center;
+        input {
+            border-radius: 0px;
+        }
+        #searchButton {
+            border: none;
+            padding: 0px;
+            #searchIcon {
+                color: $color-white;
+                font-size: 20px;
+            }
+            #searchIcon:hover {
+                color: $color-blue;
+            }
+        }
+        .cartIcon {
+            text-align: center;
+            align-items: center;
+        }
         .navbarIcon {
             color: $color-white;
             font-size: 0.8rem;
@@ -69,6 +68,29 @@ $color-white: #ffffff;
             color: $color-blue;
             text-decoration: none;
         }
+        .cartQuantity {
+            color: $color-white;
+            font-family: $font;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            background-color: $color-red;
+            border: 1px solid $color-red;
+            border-radius: 50%;
+            position: absolute;
+            right: 33px;
+            top: 37px;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+    #categoriesContainer {
+        display: grid;
+        justify-content: center;
     }
 }
 
