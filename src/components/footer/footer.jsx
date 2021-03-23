@@ -15,7 +15,7 @@ const Footer = () => {
                         <h6>Conocé más</h6>
                         <Link to={`/productos`}>Productos</Link><br/>
                         <a href="#">Sucursales</a><br/>
-                        <Link to={`/envios`}>Envíos</Link><br/>
+                        <a href="#">Envíos</a><br/>
                         <a href="#">Gift cards</a><br/>
                         <a href="#">Cambios y devoluciones</a><br/>
                         <a href="#">Mayorista</a>
@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className="col-12 col-md-4 col-lg-3 d-sm-none d-lg-block mb-5 mb-md-0 p-0">
                         <h6>Lakay Design</h6>
                         <Link to={`/nosotros`}>Nosotros</Link><br/>
-                        <Link to={`/contacto`}>Contacto</Link><br/>
+                        <a href="#">Contacto</a><br/>
                         <a href="#">Sumate a nuestro equipo</a><br/>
                         <a href="#">Términos y Condiciones</a>
                     </div>

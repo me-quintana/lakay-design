@@ -7,6 +7,7 @@ $color-red: #e34724;
 $color-white: #ffffff;
 
 .checkoutFormContainer {
+    min-height: 100vh;
     color: $color-dark-brown;
     font-family: $font;
     h5 {
@@ -54,6 +55,10 @@ $color-white: #ffffff;
     font-family: $font;
     text-align: center;
     line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     h5 {
         font-weight: bold;
         text-transform: uppercase;
@@ -67,5 +72,17 @@ $color-white: #ffffff;
     }
     #email:hover {
         color: $color-red;
+    }
+    .goToProducts {
+        color: $color-red;
+        text-transform: uppercase;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        transition: 0.15s;
+    }
+    .goToProducts:hover {
+        color: $color-blue;
+        letter-spacing: 0.03rem;
     }
 }

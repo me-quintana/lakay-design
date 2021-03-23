@@ -8,9 +8,7 @@ import Footer from './components/footer/footer.jsx';
 import Home from './components/home/home.jsx';
 import ItemListContainer from './containers/itemListContainer/itemListContainer.jsx';
 import ItemDetailContainer from './containers/itemDetailContainer/itemDetailContainer.jsx';
-import Envios from './components/envios/envios.jsx';
 import Nosotros from './components/nosotros/nosotros.jsx';
-import Contacto from './components/contacto/contacto.jsx';
 import CartContainer from './containers/cartContainer/cartContainer.jsx';
 import CartProvider from './context/cartContext/cartContext.jsx';
 import Checkout from './components/checkout/checkout.jsx';
@@ -37,11 +35,7 @@ const App = () => {
 
           <Route exact path="/checkout" component={Checkout}/>
 
-          <Route exact path="/envios" component={Envios}/>
-
           <Route exact path="/nosotros" component={Nosotros}/>
-
-          <Route exact path="/contacto" component={Contacto}/>
 
           <Route path="*" children={<div className="d-flex justify-content-center my-5"><img src="/images/404.jpg" alt="Error 404"/></div>}/>
 

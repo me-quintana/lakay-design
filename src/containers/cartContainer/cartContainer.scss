@@ -7,6 +7,7 @@ $color-red: #e34724;
 $color-white: #ffffff;
 
 #cartContainer {
+    min-height: 100vh;
     font-family: $font;
     .cartDetailHeader {
         display: grid;
@@ -44,6 +45,20 @@ $color-white: #ffffff;
     .cartButtonContainer {
         display: flex;
         justify-content: flex-end;
+        .continueBuyingButton {
+            color: $color-dark-brown;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid $color-dark-brown;
+            border-radius: 0.3rem;
+            width: 12rem;
+            transition: 0.15s;
+        }
+        .continueBuyingButton:hover {
+            background-color: $color-dark-brown;
+            color: $color-white;
+        }
         .emptyCartButton {
             color: $color-dark-brown;
             text-transform: uppercase;
@@ -51,7 +66,7 @@ $color-white: #ffffff;
             text-decoration: none;
             border: 1px solid $color-dark-brown;
             border-radius: 0.3rem;
-            width: 10rem;
+            width: 12rem;
             transition: 0.15s;
         }
         .emptyCartButton:hover {
@@ -66,7 +81,7 @@ $color-white: #ffffff;
             text-decoration: none;
             border: 1px solid $color-brown;
             border-radius: 0.3rem;
-            width: 10rem;
+            width: 12rem;
             transition: 0.15s;
         }
         .continueButton:hover {

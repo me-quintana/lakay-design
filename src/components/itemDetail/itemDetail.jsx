@@ -18,13 +18,13 @@ const ItemDetail = ({ item }) => {
     };
 
     return (
-        <div className="container-fluid mx-0 my-5 px-5">
+        <div className="container-fluid cardContainer mx-0 my-5 px-5">
             <div className="card cardItemDetail p-sm-3">
                 <div className="row no-gutters">
                     <div className="col-md-4">
                         <img src={item.image} alt={item.name}/>
                     </div>
-                    <div className="col-md-8 card-body mt-4">
+                    <div className="col-md-8 card-body mt-4 pl-5">
                         <h5 className="card-title">{item.name}</h5>
                         <p className="card-text">{item.description}</p>
                         <p className="card-text">Medidas:<br/>{item.dimensions}</p>

@@ -17,6 +17,9 @@ $color-white: #ffffff;
         #burgerMenuIcon {
             color: $color-white;
             font-size: 25px;
+            position: absolute;
+            right: 1rem;
+            top: 2.7rem;
         }
     }
     .navbar-collapse {
@@ -53,10 +56,6 @@ $color-white: #ffffff;
                 color: $color-blue;
             }
         }
-        .cartIcon {
-            text-align: center;
-            align-items: center;
-        }
         .navbarIcon {
             color: $color-white;
             font-size: 0.8rem;
@@ -88,10 +87,41 @@ $color-white: #ffffff;
             margin: 0px;
         }
     }
-    #categoriesContainer {
-        display: grid;
-        justify-content: center;
-    }
+    .cartIcon {
+        position: absolute;
+        right: 4rem;
+        top: 2.3rem;
+        .navbarIcon {
+            color: $color-white;
+            font-size: 0.8rem;
+            .iconFontAwesone {
+                font-size: 20px;
+            }
+        }
+        .navbarIcon:hover {
+            color: $color-blue;
+            text-decoration: none;
+        }
+        .cartQuantity {
+            color: $color-white;
+            font-family: $font;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            background-color: $color-red;
+            border: 1px solid $color-red;
+            border-radius: 50%;
+            position: absolute;
+            right: -0.2rem;
+            top: 0.4rem;
+            padding: 0px;
+            margin: 0px;
+            }
+        }
 }
 
 //Media queries
@@ -106,6 +136,10 @@ $color-white: #ffffff;
     }
 }
 
+//Medium
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
 //Large
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .sectionBrown {
@@ -114,17 +148,10 @@ $color-white: #ffffff;
             grid-template-columns: 1fr 1fr 1fr;
             text-align: center;
             align-items: center;
-            .navbarIcon {
-                color: $color-white;
-                font-size: 0.8rem;
-                .iconFontAwesone {
-                    font-size: 20px;
-                }
-            }
-            .navbarIcon:hover {
-                color: $color-blue;
-                text-decoration: none;
-            }
+        }
+        #categoriesContainer {
+            display: grid;
+            justify-content: center;
         }
     }
 }
@@ -137,17 +164,10 @@ $color-white: #ffffff;
             grid-template-columns: 1fr 1fr 1fr;
             text-align: center;
             align-items: center;
-            .navbarIcon {
-                color: $color-white;
-                font-size: 0.8rem;
-                .iconFontAwesone {
-                    font-size: 20px;
-                }
-            }
-            .navbarIcon:hover {
-                color: $color-blue;
-                text-decoration: none;
-            }
+        }
+        #categoriesContainer {
+            display: grid;
+            justify-content: center;
         }
     }
 }

@@ -46,6 +46,7 @@ const CartContainer = () => {
                         <p>Total: <span>{`$${totalPrice}`}</span></p>
                     </div>
                     <div className="cartButtonContainer my-3 mx-5">
+                        <Link to={`/productos`}><button className="btn continueBuyingButton mr-3">Seguir comprando</button></Link>
                         <button className="btn emptyCartButton mr-3" onClick={emptyCart}>Vaciar carrito</button>
                         <Link to={`/checkout`}><button type="button" className="btn shadow-sm continueButton">Continuar</button></Link>
                     </div>

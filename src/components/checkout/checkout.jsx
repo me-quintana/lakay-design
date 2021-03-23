@@ -83,6 +83,7 @@ const Checkout = () => {
                         Tu número de orden es <span id="order">{orderID}</span><br/><br/>
                         Ya enviamos el detalle de tu compra y el código de seguimiento del envío a tu casilla de correo electrónico (<a id="email">{email}</a>).
                     </p>
+                    <Link to={`/productos`} className="goToProducts">Iniciar una nueva compra</Link>
                 </div>
                 :
                 <div className="checkoutFormContainer my-3 mx-5">
@@ -139,34 +140,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-
-/*const Checkout = () => {
-        
-    return (
-        <>
-            {
-                orderId ?
-                    <section className="compraRealizada">
-                        <h2>{nombre} felicidades, tu compra fué realizada con exito!</h2>
-                        <p>el total de tu compra es: ${precioFinal}</p>
-                        <p>Tu numero de orden es: <strong>{orderId}</strong> </p>
-                        <p>fecha de compra: {date}</p>
-                        <p>Tus productos comprados:</p>
-                        {React.Children.toArray(
-                            cartFinal.map((prod) => (
-                                <div>
-                                        <img src={prod.product.image} alt={prod.product.description}></img>
-                                        <h2>{prod.product.name}</h2>
-                                        <p>{prod.product.description}</p>
-                                        <p>Cantidad: {prod.cantidad}</p>
-                                        <hr/>
-                                </div>
-                            ))
-                        )}
-                    </section>
-                    :
-            }
-        </>
-    )
-}*/

@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-lg d-block sectionBrown p-2">
-            <div className="container-fluid">
+            <div className="container-fluid d-flex align-items-baseline">
                 <Link to={`/`} className="navbar-brand">
                     <img src="/images/logo-marron.png" className="navbarLogo" alt="Logo Lakay Design"/> 
                 </Link>

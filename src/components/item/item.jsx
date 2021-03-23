@@ -12,9 +12,15 @@ const Item = ({ item }) => {
                         <h5 className="card-title m-0">{item.name}</h5>
                         <p className="mt-3">${item.price}</p>
                     </div>
-                    <div className="card-footer">
-                        <button type="button" className="btn shadow-sm mainBtn seeDetail">Ver producto</button>
-                    </div>
+                    {(item.stock === 0) ?
+                        <div className="card-footer">
+                            <button type="button" className="btn mainBtn disabled">SIN STOCK</button>
+                        </div>
+                        :
+                        <div className="card-footer">
+                            <button type="button" className="btn shadow-sm mainBtn seeDetail">Ver producto</button>
+                        </div>
+                    }
                 </div>
             </Link>
         </div>

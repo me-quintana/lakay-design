@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import swal from 'sweetalert';
 
 export const CartContext = createContext();
 
@@ -40,6 +41,12 @@ export default function CartProvider({ children }) {
             //Agregar productos nuevos al carrito
             setCart([...cart, {item, quantity}]);
         };
+        swal({
+            text: "Producto agregado al carrito",
+            icon: "success",
+            button: false,
+            timer: 1200
+          });
         localStorage.removeItem('cart');
         localStorage.removeItem('cartQuantity');
         localStorage.removeItem('totalPrice');
